@@ -6,10 +6,10 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 dotenv.config();
 
-const db = require("./models");
+//const db = require("./models");
 
 //route
-const barangRouter = require("./routers/barang.router");
+const usersRouter = require("./routers/users.router");
 
 //middleware
 app.use(express.json());
@@ -19,17 +19,16 @@ app.use(helmet());
 app.use(cors());
 
 // ROUTES MIDDLEWARE
-app.use("/api", barangRouter);
+app.use("/api", usersRouter);
 
-db.sequelize
-  .sync()
-  .then(() => {
-    console.log("Synced db.");
-  })
-  .catch((err) => {
-    console.log("Failed to sync db: " + err.message);
-  });
-
+// db.sequelize
+//   .sync()
+//   .then(() => {
+//     console.log("Synced db.");
+//   })
+//   .catch((err) => {
+//     console.log("Failed to sync db: " + err.message);
+//   });
 app.listen(8001, () => {
-  console.log("product listening to port 8001");
+  console.log("running");
 });
