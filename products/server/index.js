@@ -29,7 +29,6 @@ db.sequelize
   .catch((err) => {
     console.log("Failed to sync db: " + err.message);
   });
-
-app.listen(8001, () => {
-  console.log("product listening to port 8001");
+app.listen(process.env.NODE_DOCKER_PORT || 5000, () => {
+  console.log("running");
 });
