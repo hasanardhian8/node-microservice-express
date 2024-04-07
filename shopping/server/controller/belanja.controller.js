@@ -8,7 +8,7 @@ module.exports.find = async (req, res) => {
   //   return res.status(404).send("not found mauk");
   // }
   return res.status(200).send({
-    message: "get all product",
+    message: "get all belanja",
   });
 };
 
@@ -25,7 +25,7 @@ module.exports.add = async (req, res) => {
   //   return res.status(404).send("not found mauk");
   // }
   return res.status(200).send({
-    message: "add product",
+    message: "add belanja",
   });
 };
 
@@ -40,7 +40,7 @@ module.exports.getOne = async (req, res) => {
   //   return res.status(404).send("not found");
   // }
   return res.status(200).send({
-    message: "get One product",
+    message: "get One belanja",
   });
 };
 
@@ -64,7 +64,7 @@ module.exports.update = async (req, res) => {
   //   });
   // }
   return res.status(200).send({
-    message: "update product",
+    message: "update belanja",
   });
 };
 module.exports.delete = async (req, res) => {
@@ -78,6 +78,6 @@ module.exports.delete = async (req, res) => {
   //   return res.status(404).send("not found");
   // }
   return res.status(200).send({
-    message: "delete product",
+    message: "delete belanja",
   });
 };

@@ -9,7 +9,7 @@ dotenv.config();
 //const db = require("./models");
 
 //route
-const barangRouter = require("./routers/barang.router");
+const belanjaRouter = require("./routers/belanja.router");
 
 //middleware
 app.use(express.json());
@@ -19,7 +19,7 @@ app.use(helmet());
 app.use(cors());
 
 // ROUTES MIDDLEWARE
-app.use("/api", barangRouter);
+app.use("/api", belanjaRouter);
 
 // db.sequelize
 //   .sync()
@@ -29,6 +29,6 @@ app.use("/api", barangRouter);
 //   .catch((err) => {
 //     console.log("Failed to sync db: " + err.message);
 //   });
-app.listen(8002, () => {
+app.listen(8003, () => {
   console.log("running");
 });
